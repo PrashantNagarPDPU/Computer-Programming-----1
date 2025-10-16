@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+ {
+    int boys = 0;
+    int girls = 0;
+    char gender;
+
+    printf("Enter the gender for each of the 50 students :\n");
+
+    for (int i = 1; i <= 50; i++)
+     {
+        printf("Student %d: ", i);
+        scanf(" %c", &gender); 
+
+        if (gender == 'M' )
+        {
+            boys++;
+        } else if (gender == 'F' )
+        {
+            girls++;
+        } 
+        else
+         {
+            printf("Invalid input. Please enter 'M' or 'F'.\n");
+            
+        }
+    }
+    printf("Total Boys: %d\n", boys);
+    printf("Total Girls: %d\n", girls);
+
+    return 0;
+}

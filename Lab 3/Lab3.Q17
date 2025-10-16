@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+    int pos_count = 0;
+    int neg_count = 0;
+    int zero_count = 0;
+    int i;
+
+    printf("Enter 200 integer values:\n");
+
+    for (i = 0; i < 200; i++) {
+        printf("Enter value %d: ", i + 1);
+        scanf("%d", &num);
+
+        if (num > 0)
+         {
+            pos_count++;
+        } 
+        else if (num < 0)
+         {
+            neg_count++;
+        } 
+        else
+         {
+            zero_count++;
+        }
+    }
+    printf("Positive numbers: %d\n", pos_count);
+    printf("Negative numbers: %d\n", neg_count);
+    printf("Zeroes: %d\n", zero_count);
+
+}

@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+void main() 
+{
+    int subject1, subject2, subject3;
+    int total_marks;
+    float average_marks;
+
+    printf("Enter marks for Subject 1: ");
+    scanf("%d", &subject1);
+    printf("Enter marks for Subject 2: ");
+    scanf("%d", &subject2);
+    printf("Enter marks for Subject 3: ");
+    scanf("%d", &subject3);
+
+    if (subject1 < 35 || subject2 < 35 || subject3 < 35) {
+        printf("Result: Fail (Failed in one or more subjects)\n");
+    }
+     else 
+    {
+        
+        total_marks = subject1 + subject2 + subject3;
+        average_marks = (float)total_marks / 3;
+
+        printf("Total Marks: %d\n", total_marks);
+        printf("Average Marks: %.2f\n", average_marks);
+
+        
+        if (average_marks >= 70)
+         {
+            printf("Grade: Distinction\n");
+        } 
+        else if (average_marks >= 60) 
+        {
+            printf("Grade: First Class\n");
+        } 
+        else if (average_marks >= 50) 
+        {
+            printf("Grade: Second Class\n");
+        } 
+        else if (average_marks >= 35) 
+        {
+            printf("Grade: Third Class\n");
+        } 
+        else
+         {
+            printf("Grade: Fail\n");
+        }
+    }
+
+}
